@@ -16,7 +16,10 @@ class Sprite {
      this.height = 150
      this.lastKey
      this.attackBox = {
-        position: this.position,
+        position: {
+            x: this.position.x,
+            y: this.position.y
+        },
         width: 100,
         height: 50
      }
@@ -29,6 +32,7 @@ class Sprite {
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
 
         //attack box
+        // if(this.isAttacking) {
         c.fillStyle= 'green'
         c.fillRect(
          this.attackBox.position.x,
@@ -36,9 +40,12 @@ class Sprite {
          this.attackBox.width,
          this.attackBox.height
          )
+        // }
     }
     update(){
         this.draw()
+        this.attackBox.position.x = this.position.x
+        this.attackBox.position.y = this.position.y
 
         this.position.x += this.velocity.x
         this.position.y += this.velocity.y
@@ -134,7 +141,7 @@ function animate() {
          && player.attackBox.position.y <= enemy.position.y + enemy.height &&
          player.isAttacking
          ) {
-        console.log('collided')
+        console.log('HIT!')
     }
 }
 
