@@ -2,5 +2,5 @@
 - [x] Create Player and Enemy
 - [x] Move Characters with Event Listeners
 - [x] Attacks
-- [] Health Bar Interface
+- [x] Health Bar Interface
 - [] Game Timers and Game Over
