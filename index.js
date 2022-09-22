@@ -143,7 +143,7 @@ function determineWinner({ player, enemy, timerId }) {
 }
 
 let timer = 60;
-let timerId
+let timerId;
 function decreaseTimer() {
   if (timer > 0) timerId = setTimeout(decreaseTimer, 1000);
   timer--;
