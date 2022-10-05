@@ -11,9 +11,9 @@ const gravity = 0.7;
 const background = new Sprite({
   position: {
     x: 0,
-    y: 0,
+    y: -96,
   },
-  imageSrc: "./img/background/background_layer_3.png"
+  imageSrc: "./img/background/background_image_2.png"
 });
 
 const player = new Fighter({
